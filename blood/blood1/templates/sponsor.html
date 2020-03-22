@@ -1,0 +1,248 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blood donner</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  /* bg for background coclor */
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+  .nav{
+    overflow: hidden;
+    height:70px;
+    width: 100%;
+    background-color:#655d5d;
+    text-align: center;
+    opacity: 0.6;
+    }
+  .nav ul{
+    display: inline-flex;
+    list-style: none;
+    color: white;
+  }
+  .nav ul li{
+    width: 120px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .nav ul li a{
+    text-decoration: none;
+    color: white;
+  }
+  .nav ul li:hover{
+    background-color: #655d5d;
+    border-radius: 3px;
+  }
+  .nav-1{
+    display: none;
+    position: relative;
+  }
+  .nav ul li:hover .nav-1{
+    display: block;
+    position: absolute;
+    background-color: #655d5d;
+  }
+  .nav ul li:hover .nav-1 ul{
+    display: block;
+    margin:10px;
+  }
+  .nav ul li:hover .nav-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom:1px dotted #fff;
+  }
+  .nav ul li:hover .nav-1 ul li:last-child{
+    border-bottom: none;
+  }
+  .nav ul li:hover .nav-1 ul li a:hover{
+    color: black;
+  }
+  .nav-2{
+    display: none;
+  }
+  .hover-me:hover .nav-2{
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background-color: #655d5d;
+}
+ .form1{
+   background-image: url({% static 'blood1/sponsor.webp' %});
+   background-size: cover;
+   background-position: center;
+   height: 640px;
+   background-repeat: repeat-y;
+   background-attachment: fixed;
+
+ }
+ .form1-back{
+  position:absolute;
+  margin-top: 215px;
+  text-align: center;
+  height: 76px;
+  background-color: #373434;
+  opacity:0.5;
+  margin-left: 38px;
+  width: 702px;
+  background-attachment: fixed;
+ }
+ 
+ input[type=text]{
+  width:350px;
+  margin-left: 10px;
+ }
+ p{
+  margin-left: 10px;
+ }
+ .footer{
+  width: 100%;
+  height:100px;
+  background-attachment: #655d5d;
+  background-color: #4b4949;
+  text-align: center;
+  padding-top: 15px;
+  margin-top: 10px;
+
+ }
+.chilp{
+  background-color: #766e6e;
+  margin-top: 10px;
+  margin-left: -143px;
+  height: 230px;
+  width: 782px;
+}
+</style>
+</head>
+<body>
+  {% csrf_token %}
+  <div class="form1">
+    <div class="form1-back">
+      <p style="color: white;font-size: 50px;"><b>Orphan Child Sponsorship</b></p>
+      
+  </div>
+  
+    <div class="nav">
+    <img style="float: left;height: 40px; margin-top: 10px; margin-left: 100px;" src="{% static 'blood1/logo.jpg' %}" ><ul>
+    <li><a href="#"> Home</a></li>
+    <li ><a href="#">About Us</a>
+      <div class="nav-1">
+        <ul>
+          <li div class="hover-me"><a href="#">Our Mission</a>
+            <div class="nav-2">
+        <ul>
+          <li><a href="#">Mission Statement</a></li>
+          <li><a href="#">Statement Of Faith</a></li>
+          <li><a href="#">Board Of Directors</a></li>
+          <li><a href="#">Our Staff</a></li>
+          <li><a href="#">History</a></li>
+        </ul>
+      </div>
+          </li>
+          <li div class="hover-me"><a href="#">Our Pillars</a>
+               <div class="nav-2">
+        <ul>
+          <li><a href="#">Our Hostel</a></li>
+          <li><a href="#">Our School</a></li>
+          <li><a href="#">Agricultural Projects</a></li>
+          <li><a href="#">Leprosy Mission</a></li>
+          <li><a href="#">Disaster Relief</a></li>
+          <li><a href="#">Vocational Training</a></li>
+        </ul>
+      </div>
+
+          </li>
+          <li div class="hover-me" ><a href="#">More Info</a>
+            <div class="nav-2">
+        <ul>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">National Geographic Photocamp</a></li>
+          <li><a href="#">Download Brochure</a></li>
+          <li><a href="#">Financial & Reports</a></li>
+          <li><a href="#">Our Blog</a></li>
+        </ul>
+      </div>
+          </li>
+          <li><a href="#">Summer Games</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#">Support</a>
+      <div class="nav-1">
+        <ul>
+          <li><a href="#">Sponsor A Child</a></li>
+          <li><a href="#">Donate Financially</a></li>
+          <li><a href="#">Donate Goods In Kind</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#">Volunteer</a>
+      <div class="nav-1">
+        <ul>
+          <li><a href="/blood/life_as_a_volunteer/">Life As A Volunteer</a></li>
+          <li><a href="/blood/apply_volunteer/">Apply To Volunteer</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#">Other</a>
+      <div class="nav-1">
+        <ul>
+          <li><a href="#">Adoption</a></li>
+          <li><a href="/blood/childprotection/">Child Protection</a></li>
+          <li><a href="/blood/policies/">Policies</a></li>
+          <li><a href="/blood/startnonprofit/">Starting A Non-Profit</a></li>
+          <li><a href="/blood/supporters/">Our Supporters</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="/blood/contact/">Contact Us</a>
+      <a href="/blood/donate/"> <button style="margin-top: -41px;margin-left: 169px;" type="button" class="btn btn-warning">Donate</button></a>
+  </ul>
+  </nav>
+</div>
+      </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-6">
+          <img style="margin-left: 10px;width: 650px;margin-top: 40px;height: 470px;" src="{% static 'blood1/sponsor1.jpg' %}">
+        </div>
+        <div class="col-sm-6">
+          <h1 style="text-align: center;">Our Program</h1>
+          <p style="font-size: 20px;">We’d like to create a more personal experience for both our children and their sponsors. We believe connection is what our kids need most, more than money, more than gifts. They need to know that someone cares.
+
+Our children come from a multitude of backgrounds, some with at least one parent or other family member, some with no one outside the Mission gates. Those with surviving relatives often maintain some level of contact with their families. These bonds are encouraged by us, as we know how important a sense of family is to a child’s development. And so we’re looking for people who care. Supportive, champions to encourage and connect with our kids. These are the kinds of people we intend to involve in our child sponsorship program.
+
+It doesn’t cost much to support a child in India. Just $1 a day is all we need. This may not seem like much money to you, but as you read on hopefully you will be able to understand ‘why’ and ‘how’ we can do so much for so little.
+</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <h1 style="text-align: center;">A Lasting Commitment</h1>
+          <p style="font-size: 20px;">If you are thinking of getting involved in our orphan child sponsorship program, we ask you to consider carefully the commitment you are willing to make. Our hope is: sponsors will become part of our children’s lives. They will not simply give money. They will write letters, send pictures, occasionally call, share family stories, build a bond that will enrich both your life and your sponsored child’s life. After so much abandonment, we are hopeful these bonds can become a vital force that helps guide our children into adulthood, perhaps surviving for a lifetime. For this reason, we ask all prospective sponsors to think carefully before getting involved. A small group of committed individuals is what we are looking for and we hope you’ll join us by becoming a mentor, friend and extended member of the Good Shepherd Agricultural Mission family.</p>
+        </div>
+        <div class="col-sm-6">
+          <img style="width: 650px; height: 500px;" src="{% static 'blood1/sponsor2.jpg' %}">
+        </div>
+      </div>
+
+<div class="footer">
+  <p style="margin-top: 10px; color: white;">@copyright reserved</a></p> 
+</footer>
+  </body>
+  </html>

@@ -1,0 +1,106 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
+		    .bg-1{
+      background-color: white;
+      height:500px;
+    }
+    .bg-2{
+      background-color: #e8e6e6;
+      height:507px;
+      margin-top: -18px;
+      margin-left: 35px;
+    }
+    .bg-3{
+      background-color: #fcfafa;
+      height:398px;
+      margin-top: -453px;
+      margin-left: 53px;
+      margin-right: 24px;
+    }
+    .bg-4{
+        background-color: #2f2f2f;
+        color: #ffffff;
+        height:90px;
+        margin-top: -5px;
+      }
+  .container-fluid {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+
+.navbar-nav li a:hover {
+  color: #1abc9c !important;
+}
+
+</style>
+<body>
+  {% csrf_token %}
+   <nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/blood/index">Home</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/blood/signup">REGISTER</a></li>
+        <li><a href="/blood/why">Why donate blood</a></li>
+        <li><a href="/blood/who">WHo needs blood</a></li>
+        <li><a href="/blood/find">find donor</a></li>
+        <li><a href="/blood/contact">Contact us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> 
+<div class="container-fluid">
+    <div class="row" style="margin-top: -88px;">
+      <div class="col-lg-8 bg-1" >
+        <div class="bg-2"><h3 style="color: green;">Tips on Blood Donation</h3></div>
+          <div class="bg-3">
+              <ul style="list-style-type:disc;">
+                <li>Have a good meal at least 3 hours before donating blood.</li>
+                <li>Accept the snacks offered to you after the donation, it is vital that you have them. You are recommended to have a good meal later.</li>
+                <li>Avoid smoking on the day before donating. You can smoke 3 hours after donation.</li>
+                <li>You will not be eligible to donate blood if you have consumed alcohol 48 hours before donation.</li>
+              </ul>
+              <h6><b> Misconceptions about donating blood </b></h6>
+              <ul style="list-style-type: disc;">
+                <li>"I will feel drained and tired after donating" - You will not feel drained or tired if you continue to drink fluids and have a good meal.</li>
+                <li>"I cannot resume normal activities" - You can resume all your normal activities, though you're asked to refrain.</li>
+                <li>"I will have low blood" - If you are okayed to donate by the doctor you will still have surplus blood after the donation.</li>
+                <li>"I can't take alcohol..." - You can on the next day.</li>
+                <li>"It will be painful while donating" - No, you will not feel any pain.</li>
+                <li>"I will feel dizzy and may faint" - You will not faint or feel uncomfortable after donating blood.</li>
+                <li>"I may get AIDS!" - No! Make sure disposable syringes are used and all measures are taken to keep you germ free.</li>
+                <li>"My blood is common. I don't think there will be demand for it" - That is why the demand for your type is greater than for rare types.</li>
+              </ul>
+        </div>  
+      </div>
+      <div class="col-lg-4" style="background-color:e8e6e6;height:400px;">
+      <h1>Find a Donor</h1>
+      {{ form.as_p }}
+      <button type="submit">search</button>
+    </div>
+  </div>
+  </div>
+</form>
+</div>
+  <footer class="container-fluid bg-4" style="text-align:center">
+  <p>Copyright © IndianBloodBank.com. 2019. All rights reserved</p> 
+</footer>
+</body>
+</head>
+</html>

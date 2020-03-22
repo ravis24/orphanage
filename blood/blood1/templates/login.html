@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blood donner</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  /* bg for background color */
+ .bg-1{
+      background-color: white;
+      height:500px;
+    }
+    .bg-5{
+    	background-color: #f5ecec;
+    	margin-top: 10px;
+    	margin-left: 5px;
+    	height:380px;
+    }
+    .bg-2{
+      background-color: #e8e6e6;
+      height:380px;
+      margin-top: 0px;
+      margin-left: 35px;
+    }
+    .bg-3{
+      background-color: #fcfafa;
+      height:270px;
+      margin-top: -345px;
+      margin-left: 65px;
+      margin-right: 49px;
+      margin-bottom: 50px;
+      width: 800px;
+    }
+    .bg-4{
+        background-color: #2f2f2f;
+        color: #ffffff;
+        height:90px;
+        margin-top: -74px;
+        height:150px;
+        margin-bottom: -80px;
+      }
+    
+  .container-fluid {
+  padding-top: 10px;
+  padding-bottom: 70px;
+
+}
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+
+.navbar-nav li a:hover {
+  color: #1abc9c !important;
+}
+
+.bg-11{
+	background-color: #e8e6e6;
+	margin-top: -46px;
+	height:250px;
+	margin-left: 20px;
+}
+.bg-10{
+	background-color:#e8e6e6 ;
+	margin-top: -24px;
+	height:247px;
+}
+.bg-12{
+	background-color: #e8e6e6;
+	height:150px;
+	margin-left: 20px;
+	margin-top: 8px;
+}
+.bg-13{
+	background-color: #e8e6e6;
+	height:150px;
+	margin-left: 10px;
+	margin-top: 8px;
+}
+.bg-14{
+	background-color: #e8e6e6;
+	height:150px;
+	margin-left: 885px;
+	margin-top: -151px;
+	width:380px;
+}
+</style>
+</head>
+<body>
+	<form method="post" action="">
+	{% csrf_token %}
+	 <nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/blood/index">Home</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/blood/signup">REGISTER</a></li>
+        <li><a href="/blood/why">Why donate blood</a></li>
+        <li><a href="/blood/who">WHo needs blood</a></li>
+        <li><a href="/blood/find">find donor</a></li>
+        <li><a href="/blood/contact">Contact us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+    	<div class="col-lg-4" style="background-color:#e8e6e6;height: 400px;">
+      <h1>Find a Donor</h1>
+      {{ form.as_p }}
+      <button type="submit">search</button>
+      </form>
+    </div>
+      <div class="col-lg-4 " >
+        <div class="bg-2">
+          	<img src="{% "static blood1/blood.jpeg" %}" style="height:380px;width: 802px;">
+        </div>
+        </div>  
+
+      </div>
+  </div>
+  </div>
+</div>
+<div class="row" >
+	<div class="col-lg-8 bg-9" >
+		<div class="bg-11">
+		<h2 style="color:green;">Donors` Speak</h2>
+		<img src="{% static 'blood1/blood1.jpeg' %}" >
+		<p style="margin-left: 350px;margin-top: -150px;">"I donated blood to a needy patient undergoing open heart surgery at GKNM Hospital, Coimbatore. I am happy to be associated with BharatBloodBank and thank them for giving me this opportunity.</p>
+
+	</div>
+	</div>
+	<div class="col-lg-4 bg-10">
+		<h2 style="color:green"> Related Links</h2>
+		<a hrf="www.indianblooddonors.com">www.indianblooddonors.com<br></a>
+		<a hrf="www.jeevan.org">www.jeevan.org<br></a>
+		<a hrf="www.aabb.org">www.aabb.org<br></a>
+		<a hrf="www.redcross.org">www.redcross.org<br></a>
+
+	</div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+  	<a href="#" style="text-decoration: none;">
+    <div class="col-lg-4 bg-12"><h4 style="color:green">Tips on Blood Donation</h4>
+    	<img src="{% static 'blood1/index.jpeg' %}" style="height:100px">
+		<p style="margin-left: 120px;margin-top: -100px; color:black"> You are noble but you got to be informed as well...</p></a></div>
+		<a href="#" style="text-decoration: none;">
+    <div class="col-lg-4 bg-13"><h4 style="color:green">Blood  Facts</h4>
+		<img src="{% static 'blood1/index1.jpeg' %}" style="height:100px; width:80px;margin-left: -7px;margin-top: 0px;">
+		<p style="margin-left: 120px;margin-top: -100px; color:black"> You are noble but you got to be informed as well...</p></div></a></div>
+		<a href="/blood/feedback" style="text-decoration: none;">
+    <div class="col-lg-4 bg-14" ><h4 style="color:green">Share your feedback</h4><img src="{% static 'blood1/index1.jpeg' %}" style="height:100px; width:80px;margin-left: -7px;margin-top: 0px;">
+		<p style="margin-left: 120px;margin-top: -100px; color:black"> You are noble but you got to be informed as well...</p></div></a></div>
+  </div>
+</div>
+<div  class="container-fluid">
+<footer class="container-fluid bg-4 text-center">
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">Ravi Ranjan</a></p> 
+</footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
+		.bg-1{
+			background-color: #484545;
+			height:500px;
+      width:100%;
+		}
+		.bg-4{
+  			background-color: #2f2f2f;
+  			color: #ffffff;
+  			height:80px;
+  			margin-top: -14px
+  		}
+  		.navbar {
+  			padding-top: 15px;
+  			padding-bottom: 15px;
+  			border: 0;
+  			border-radius: 0;
+  			margin-bottom: 0;
+  			font-size: 12px;
+  			letter-spacing: 5px;
+}
+    .bg-2{
+      background-color: #f0e9e9;
+      height:457px;
+      width:706px;
+      margin-top: 20px;
+    }
+
+.navbar-nav li a:hover {
+  color: #1abc9c !important;
+}
+	</style>
+<body>
+	<form method="post" action="">
+		{% csrf_token %}
+		<nav class="navbar navbar-inverse">
+  		<div class="container">
+    	<div class="navbar-header">
+        <a class="navbar-brand" href="/blood/home/">Blood Donation</a>
+      	<h1 style="margin-left:295px;margin-top: 20px">Create your new account</h1>
+    	</div>
+  </div>
+</nav> 
+		<div class="container-fluid bg-1 text-center">
+      <div class="container-fluid bg-2">
+        <h1> Sign Up</h1>
+			{{ form.as_p }}
+			<button type="submit">submit</button>
+    </div>
+	</div>
+</div>
+</form>
+
+	</div>
+	
+	<footer class="container-fluid bg-4 text-left">
+  <p>Copyright © IndianBloodBank.com. 2019. All rights reserved</p> 
+</footer>
+</body>
+</head>
+</html>

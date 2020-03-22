@@ -1,0 +1,310 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blood donner</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  /* bg for background coclor */
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+  .nav{
+    overflow: hidden;
+    height:70px;
+    width: 100%;
+    background-color:#655d5d;
+    text-align: center;
+    opacity: 0.6;
+    }
+  .nav ul{
+    display: inline-flex;
+    list-style: none;
+    color: white;
+  }
+  .nav ul li{
+    width: 120px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .nav ul li a{
+    text-decoration: none;
+    color: white;
+  }
+  .nav ul li:hover{
+    background-color: #655d5d;
+    border-radius: 3px;
+  }
+  .nav-1{
+    display: none;
+    position: relative;
+  }
+  .nav ul li:hover .nav-1{
+    display: block;
+    position: absolute;
+    background-color: #655d5d;
+  }
+  .nav ul li:hover .nav-1 ul{
+    display: block;
+    margin:10px;
+  }
+  .nav ul li:hover .nav-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom:1px dotted #fff;
+  }
+  .nav ul li:hover .nav-1 ul li:last-child{
+    border-bottom: none;
+  }
+  .nav ul li:hover .nav-1 ul li a:hover{
+    color: black;
+  }
+  .nav-2{
+    display: none;
+  }
+  .hover-me:hover .nav-2{
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background-color: #655d5d;
+
+  }
+ .backimg1{
+        width: 100%;
+        height: 100vh;
+        background-image: url("{% static 'blood1/10.jpg' %}");
+        background-repeat: repeat-y;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+ }
+ .form1{
+  margin-left: 400px;
+  margin-top: 20px;
+ }
+ .container-fluid {
+  padding-top: 10px;
+  padding-bottom: 70px;
+
+}
+ .bg-4{
+        background-color: #2f2f2f;
+        color: #ffffff;
+        height:90px;
+        margin-top: 17px;
+        height:150px;
+        margin-bottom: -80px;
+      }
+    
+ .bg-10{
+  background-color:#e8e6e6 ;
+  margin-top: 16px;
+  height:247px;
+  width: 423px;
+}
+ .bg-11{
+  background-color: #e8e6e6;
+  margin-top: 16px;
+  height:250px;
+  margin-left: 20px;
+}
+.bg-12{
+  background-color: #e8e6e6;
+  height:150px;
+  margin-left: 34px;
+  margin-top: 8px;
+}
+.bg-13{
+  background-color: #e8e6e6;
+  height:150px;
+  margin-left: 10px;
+  margin-top: 8px;
+  width: 31.333%;
+}
+.bg-14{
+  background-color: #e8e6e6;
+  height:150px;
+  margin-left: 908px;
+  margin-top: -151px;
+  width:380px;
+}
+.footer{
+  width: 100%;
+  height:100px;
+  background-attachment: #655d5d;
+  background-color: #4b4949;
+  text-align: center;
+  padding-top: 15px;
+  margin-top: 10px;
+
+ }
+</style>
+</head>
+<body>
+  <form method="post" action="/blood/donate/">
+  {% csrf_token %}
+  
+  <div class="backimg1">
+    <div class="nav">
+  
+  <ul>
+    <li><a href="#"> Home</a></li>
+    <li ><a href="#">About Us</a>
+      <div class="nav-1">
+        <ul>
+          <li div class="hover-me"><a href="#">Our Mission</a>
+            <div class="nav-2">
+        <ul>
+          <li><a href="#">Mission Statement</a></li>
+          <li><a href="#">Statement Of Faith</a></li>
+          <li><a href="#">Board Of Directors</a></li>
+          <li><a href="#">Our Staff</a></li>
+          <li><a href="#">History</a></li>
+        </ul>
+      </div>
+          </li>
+          <li div class="hover-me"><a href="#">Our Pillars</a>
+               <div class="nav-2">
+        <ul>
+          <li><a href="#">Our Hostel</a></li>
+          <li><a href="#">Our School</a></li>
+          <li><a href="#">Agricultural Projects</a></li>
+          <li><a href="#">Leprosy Mission</a></li>
+          <li><a href="#">Disaster Relief</a></li>
+          <li><a href="#">Vocational Training</a></li>
+        </ul>
+      </div>
+
+          </li>
+          <li div class="hover-me" ><a href="#">More Info</a>
+            <div class="nav-2">
+        <ul>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">National Geographic Photocamp</a></li>
+          <li><a href="#">Download Brochure</a></li>
+          <li><a href="#">Financial & Reports</a></li>
+          <li><a href="#">Our Blog</a></li>
+        </ul>
+      </div>
+          </li>
+          <li><a href="#">Summer Games</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#">Support</a>
+      <div class="nav-1">
+        <ul>
+          <li><a href="#">Sponsor A Child</a></li>
+          <li><a href="#">Donate Financially</a></li>
+          <li><a href="#">Donate Goods In Kind</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#">Volunteer</a>
+      <div class="nav-1">
+        <ul>
+          <li><a href="/blood/life_as_a_volunteer/">Life As A Volunteer</a></li>
+          <li><a href="/blood/apply_volunteer/">Apply To Volunteer</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#">Other</a>
+      <div class="nav-1">
+        <ul>
+          <li><a href="#">Adoption</a></li>
+          <li><a href="/blood/childprotection/">Child Protection</a></li>
+          <li><a href="/blood/policies/">Policies</a></li>
+          <li><a href="/blood/startnonprofit/">Starting A Non-Profit</a></li>
+          <li><a href="/blood/supporters/">Our Supporters</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="/blood/contact/">Contact Us</a>
+      <a href="/blood/donate/"> <button style="margin-top: -41px;margin-left: 169px;" type="button" class="btn btn-warning">Donate</button></a>
+  </ul>
+  </div>
+  </div>
+  </div>
+  <div class="form1">
+ <h1>Find a Donor</h1>
+      <p><label for="id_state">State:</label> <input type="text" name="state" maxlength="30" required id="id_state"></p>
+<p><label for="id_city">City:</label> <input type="text" name="city" maxlength="30" required id="id_city"></p>
+<p><label for="id_gender">Gender:</label> <select name="gender" required id="id_gender">
+  <option value="" selected>Select Gender</option>
+
+  <option value="male">M</option>
+
+  <option value="Female">F</option>
+
+  <option value="Others">O</option>
+
+</select></p>
+<p><label for="id_blood_group">Blood group:</label> <select name="blood_group" required id="id_blood_group">
+  <option value="" selected> Blood Group</option>
+
+  <option value="a">a+</option>
+
+  <option value="b">a-</option>
+
+  <option value="c">o+</option>
+
+  <option value="d">o-</option>
+
+  <option value="e">b+</option>
+
+</select></p>
+      <button type="submit">search</button>
+    </div>
+    {% if messages %}
+            <ul class="messages">
+                {% for k in messages %}
+                 <li style="color: red; margin-left: 400px;margin-top: 10px;">{{ k }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    <div class="row" >
+  <div class="col-lg-8" >
+    <div class="bg-11">
+    <h2 style="color:green;">Donors` Speak</h2>
+    <img src="{% static 'blood1/blood1.jpeg' %}" >
+    <p style="margin-left: 350px;margin-top: -150px;">"I donated blood to a needy patient undergoing open heart surgery at GKNM Hospital, Coimbatore. I am happy to be associated with BharatBloodBank and thank them for giving me this opportunity".</p>
+
+  </div>
+  </div>
+  <div class="col-lg-4 bg-10">
+    <h2 style="color:green"> Related Links</h2>
+    <a hrf="www.indianblooddonors.com">www.indianblooddonors.com<br></a>
+    <a hrf="www.jeevan.org">www.jeevan.org<br></a>
+    <a hrf="www.aabb.org">www.aabb.org<br></a>
+    <a hrf="www.redcross.org">www.redcross.org<br></a>
+
+  </div>
+</div>
+<div class="row">
+    <a href="/blood/donar_feedback/" style="text-decoration: none;">
+    <div class="col-lg-4 bg-12"><h4 style="color:green">Tips on Blood Donation</h4>
+      <img src="{% static 'blood1/index.jpeg' %}" style="height:100px">
+    <p style="margin-left: 120px;margin-top: -100px; color:black"> You are noble but you got to be informed as well...</p></a></div>
+    <a href="#" style="text-decoration: none;">
+    <div class="col-lg-4 bg-13"><h4 style="color:green">Blood  Facts</h4>
+    <img src="{% static 'blood1/index1.jpeg' %}" style="height:100px; width:80px;margin-left: -7px;margin-top: 0px;">
+    <p style="margin-left: 120px;margin-top: -100px; color:black"> You are noble but you got to be informed as well...</p></div></a></div>
+    <a href="/blood/feedback/" style="text-decoration: none;">
+    <div class="col-lg-4 bg-14" ><h4 style="color:green">Share your feedback</h4><img src="{% static 'blood1/index1.jpeg' %}" style="height:100px; width:80px;margin-left: -7px;margin-top: 0px;">
+    <p style="margin-left: 120px;margin-top: -100px; color:black"> You are noble but you got to be informed as well...</p></div></a></div>
+  </div>
+  <div class="footer">
+  <p style="margin-top: 10px;">@copyright reserved</a></p> 
+</footer>
+	</body>
+  </html>

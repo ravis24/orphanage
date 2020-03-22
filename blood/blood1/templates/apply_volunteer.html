@@ -1,0 +1,249 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blood donner</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  /* bg for background coclor */
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+  .nav{
+    overflow: hidden;
+    height:70px;
+    width: 100%;
+    background-color:#655d5d;
+    text-align: center;
+    opacity: 0.6;
+    }
+  .nav ul{
+    display: inline-flex;
+    list-style: none;
+    color: white;
+  }
+  .nav ul li{
+    width: 120px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .nav ul li a{
+    text-decoration: none;
+    color: white;
+  }
+  .nav ul li:hover{
+    background-color: #655d5d;
+    border-radius: 3px;
+  }
+  .nav-1{
+    display: none;
+    position: relative;
+  }
+  .nav ul li:hover .nav-1{
+    display: block;
+    position: absolute;
+    background-color: #655d5d;
+  }
+  .nav ul li:hover .nav-1 ul{
+    display: block;
+    margin:10px;
+  }
+  .nav ul li:hover .nav-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom:1px dotted #fff;
+  }
+  .nav ul li:hover .nav-1 ul li:last-child{
+    border-bottom: none;
+  }
+  .nav ul li:hover .nav-1 ul li a:hover{
+    color: black;
+  }
+  .nav-2{
+    display: none;
+  }
+  .hover-me:hover .nav-2{
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background-color: #655d5d;
+
+  }
+ .form1{
+   background-image: url({% static 'blood1/vold1.jpg' %});
+   background-size: cover;
+   background-position: center;
+   height: 630px; 
+ }
+ .form1-back{
+  position:absolute;
+  margin-left: 60px;
+  margin-top: 181px;
+ }
+ .v_form{
+  background-image: url({% static 'blood1/application.jpg' %});
+   background-size: cover;
+   background-position: center;
+   margin-top: -10px;
+   height: 300px;
+   
+ }
+ input[type=text]{
+  width:350px;
+  margin-left: 10px;
+ }
+ p{
+  margin-left: 10px;
+ }
+
+ .footer{
+  width: 100%;
+  height:100px;
+  background-attachment: #655d5d;
+  text-align: center;
+  padding-top: 10px;
+
+ }
+</style> 
+</head> 
+<body>
+  <form method = "post" enctype="multipart/form-data"> 
+  {% csrf_token %}
+  
+  <div class="form1">
+    <div class="form1-back"><p style="
+    font-size: 40px; color: #655d5d"><b>Children can make you smile anytime!! <br>But when you will make them smile??!!<br></b>
+    <p style="font-size: 40px;">  Welcome To Our Family</p>
+  </div>
+    <div class="nav">
+  
+  <ul>
+    <li><a href="#"> Home</a></li>
+    <li ><a href="#">About Us</a>
+      <div class="nav-1">
+        <ul>
+          <li div class="hover-me"><a href="#">Our Mission</a>
+            <div class="nav-2">
+        <ul>
+          <li><a href="#">Mission Statement</a></li>
+          <li><a href="#">Statement Of Faith</a></li>
+          <li><a href="#">Board Of Directors</a></li>
+          <li><a href="#">Our Staff</a></li>
+          <li><a href="#">History</a></li>
+        </ul>
+      </div>
+          </li>
+          <li div class="hover-me"><a href="#">Our Pillars</a>
+               <div class="nav-2">
+        <ul>
+          <li><a href="#">Our Hostel</a></li>
+          <li><a href="#">Our School</a></li>
+          <li><a href="#">Agricultural Projects</a></li>
+          <li><a href="#">Leprosy Mission</a></li>
+          <li><a href="#">Disaster Relief</a></li>
+          <li><a href="#">Vocational Training</a></li>
+        </ul>
+      </div>
+
+          </li>
+          <li div class="hover-me" ><a href="#">More Info</a>
+            <div class="nav-2">
+        <ul>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">National Geographic Photocamp</a></li>
+          <li><a href="#">Download Brochure</a></li>
+          <li><a href="#">Financial & Reports</a></li>
+          <li><a href="#">Our Blog</a></li>
+        </ul>
+      </div>
+          </li>
+          <li><a href="#">Summer Games</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#">Support</a>
+      <div class="nav-1">
+        <ul>
+          <li><a href="#">Sponsor A Child</a></li>
+          <li><a href="#">Donate Financially</a></li>
+          <li><a href="#">Donate Goods In Kind</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#">Volunteer</a>
+      <div class="nav-1">
+        <ul>
+          <li><a href="/blood/life_as_a_volunteer/">Life As A Volunteer</a></li>
+          <li><a href="/blood/apply_volunteer/">Apply To Volunteer</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#">Other</a>
+      <div class="nav-1">
+        <ul>
+          <li><a href="#">Adoption</a></li>
+          <li><a href="/blood/childprotection/">Child Protection</a></li>
+          <li><a href="/blood/policies/">Policies</a></li>
+          <li><a href="/blood/startnonprofit/">Starting A Non-Profit</a></li>
+          <li><a href="/blood/supporters/">Our Supporters</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="/blood/contact/">Contact Us</a>
+      <a href="/blood/donate/"> <button style="margin-top: -41px;margin-left: 169px;" type="button" class="btn btn-warning">Donate</button></a>
+  </ul>
+  </div>
+</div>
+<div class="v_form">
+    <h1 style="margin-top: 10px; text-align: center; padding-top: 20px;">Volunteer Application Form</h1>
+    
+    <div class="row">
+      <div class="col-sm-6">
+    <p><label for="id_first_name">First name:</label><input type="text" name="first_name" maxlength="30" required id="id_first_name"></p>
+  </div>
+    <div class="col-sm-6">
+<p><label for="id_last_name">Last name:</label> <input type="text" name="last_name" maxlength="30" required id="id_last_name"></p>
+</div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+<p><label for="id_emailid">Emailid: &nbsp  &nbsp &nbsp</label> <input style="width: 405px;" type="email" name="emailid" required id="id_emailid"></p>
+</div>
+<div class="col-sm-6">
+<p><label for="id_address">Address: &nbsp &nbsp</label> <input type="text" name="address" required id="id_address"></p>
+</div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+<p><label for="id_city">City: &nbsp &nbsp &nbsp &nbsp</label> <input type="text" name="city" required id="id_city"></p>
+</div>
+<div class="col-sm-6">
+<p><label for="id_state">State: &nbsp &nbsp &nbsp &nbsp &nbsp</label> <input type="text" name="state" required id="id_state"></p>
+</div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+<p><label for="id_Pin_code">Pin code: &nbsp</label> <input  type="number" name="Pin_code" required id="id_Pin_code"></p>
+</div>
+<div class="col-sm-6">
+<p><label for="id_profile_image">Profile image:</label> <input style="margin-left: 150px; margin-top: -24px;" type="file" name="profile_image" accept="image/*" id="id_profile_image"></p>
+</div>
+</div>
+      <button style="margin-left: 450px;width: 200px;" type="submit">submit</button>
+    </div>
+    <div class="footer">
+    <p style="padding-top: 10px;">@Copy right reserved</p>
+  </div>
+</body>
+  </html>

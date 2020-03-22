@@ -1,0 +1,240 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blood donner</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  /* bg for background coclor */
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+  .nav{
+    overflow: hidden;
+    height:70px;
+    width: 100%;
+    background-color:#655d5d;
+    text-align: center;
+    opacity: 0.6;
+    }
+  .nav ul{
+    display: inline-flex;
+    list-style: none;
+    color: white;
+  }
+  .nav ul li{
+    width: 120px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .nav ul li a{
+    text-decoration: none;
+    color: white;
+  }
+  .nav ul li:hover{
+    background-color: #655d5d;
+    border-radius: 3px;
+  }
+  .nav-1{
+    display: none;
+    position: relative;
+  }
+  .nav ul li:hover .nav-1{
+    display: block;
+    position: absolute;
+    background-color: #655d5d;
+  }
+  .nav ul li:hover .nav-1 ul{
+    display: block;
+    margin:10px;
+  }
+  .nav ul li:hover .nav-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom:1px dotted #fff;
+  }
+  .nav ul li:hover .nav-1 ul li:last-child{
+    border-bottom: none;
+  }
+  .nav ul li:hover .nav-1 ul li a:hover{
+    color: black;
+  }
+  .nav-2{
+    display: none;
+  }
+  .hover-me:hover .nav-2{
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background-color: #655d5d;
+}
+ .form1{
+   background-image: url({% static 'blood1/policies.jpg' %});
+   background-size: cover;
+   background-position: center;
+   height: 640px;
+
+ }
+ .form1-back{
+  position:absolute;
+  margin-top: 224px;
+  text-align: center;
+  width: 100%;
+  height: 120px;
+  background-color: #373434;
+  opacity:0.5;
+  margin-left: 504px;
+  width: 749px;
+ }
+ 
+ input[type=text]{
+  width:350px;
+  margin-left: 10px;
+ }
+ p{
+  margin-left: 10px;
+ }
+ .footer{
+  width: 100%;
+  height:100px;
+  background-attachment: #655d5d;
+  background-color: #4b4949;
+  text-align: center;
+  padding-top: 15px;
+  margin-top: 10px;
+
+ }
+.add1{
+  background-image: url("{% static 'blood1/add1.jpg' %}");
+  height: 300px;
+  opacity: 0.8;
+  margin-top: 20px;
+  margin-left: 19px;
+  margin-right: -28px;
+
+}
+.add2{
+  background-color: #d6bfbf;
+  height: 300px;
+  margin-top: 20px;
+  opacity: 0.3;
+}
+.chilp{
+  background-color: #766e6e;
+  margin-top: 10px;
+  margin-left: -143px;
+  height: 230px;
+  width: 782px;
+}
+</style>
+</head>
+<body>
+  {% csrf_token %}
+  <div class="form1">
+    <div class="form1-back"><p style="
+    font-size: 40px; color: white; margin-top: 10px;"><b>Want To Start A Non-Profit or Orphanage?</b></p>
+    <p style="height: 50px;width: 450px;background-color:#373434;color:white;font-size: 20px;margin-top: 15px;padding-top: 10px; ">Here is some humble advice from us to you...</p>
+  </div>
+  
+    <div class="nav">
+    <img style="float: left;height: 40px; margin-top: 10px; margin-left: 100px;" src="{% static 'blood1/logo.jpg' %}" ><ul>
+    <li><a href="#"> Home</a></li>
+    <li ><a href="#">About Us</a>
+      <div class="nav-1">
+        <ul>
+          <li div class="hover-me"><a href="#">Our Mission</a>
+            <div class="nav-2">
+        <ul>
+          <li><a href="#">Mission Statement</a></li>
+          <li><a href="#">Statement Of Faith</a></li>
+          <li><a href="#">Board Of Directors</a></li>
+          <li><a href="#">Our Staff</a></li>
+          <li><a href="#">History</a></li>
+        </ul>
+      </div>
+          </li>
+          <li div class="hover-me"><a href="#">Our Pillars</a>
+               <div class="nav-2">
+        <ul>
+          <li><a href="#">Our Hostel</a></li>
+          <li><a href="#">Our School</a></li>
+          <li><a href="#">Agricultural Projects</a></li>
+          <li><a href="#">Leprosy Mission</a></li>
+          <li><a href="#">Disaster Relief</a></li>
+          <li><a href="#">Vocational Training</a></li>
+        </ul>
+      </div>
+
+          </li>
+          <li div class="hover-me" ><a href="#">More Info</a>
+            <div class="nav-2">
+        <ul>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">National Geographic Photocamp</a></li>
+          <li><a href="#">Download Brochure</a></li>
+          <li><a href="#">Financial & Reports</a></li>
+          <li><a href="#">Our Blog</a></li>
+        </ul>
+      </div>
+          </li>
+          <li><a href="#">Summer Games</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#">Support</a>
+      <div class="nav-1">
+        <ul>
+          <li><a href="#">Sponsor A Child</a></li>
+          <li><a href="#">Donate Financially</a></li>
+          <li><a href="#">Donate Goods In Kind</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#">Volunteer</a>
+      <div class="nav-1">
+        <ul>
+          <li><a href="/blood/life_as_a_volunteer/">Life As A Volunteer</a></li>
+          <li><a href="/blood/apply_volunteer/">Apply To Volunteer</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#">Other</a>
+      <div class="nav-1">
+        <ul>
+          <li><a href="#">Adoption</a></li>
+          <li><a href="/blood/childprotection/">Child Protection</a></li>
+          <li><a href="/blood/policies/">Policies</a></li>
+          <li><a href="/blood/startnonprofit/">Starting A Non-Profit</a></li>
+          <li><a href="/blood/supporters/">Our Supporters</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="/blood/contact/">Contact Us</a>
+      <a href="/blood/donate/"> <button style="margin-top: -41px;margin-left: 169px;" type="button" class="btn btn-warning">Donate</button></a>
+  </ul>
+  </nav>
+</div>
+      </div>
+      </div>
+      <h1 style="text-align: center;">Please Read This Post</h1>
+      <p style="font-size: 18px; margin-top: 10px;margin-bottom: 10px; margin-right: 15px;">We have a lot of people ask us about starting a non-profit, most of the time they ask about “how they can start an orphanage” so much of the information in this page is specific for orphanages. We can’t give the best idea in regards to how much it costs to run a non-profit as our organization is not really comparable given that we grow most of our own food, run our own school, do all our own maintenance/vehicle repairs and also make much of our furniture/buildings/clothing… etc.</p>
+    
+
+<div class="footer">
+  <p style="margin-top: 10px;">@copyright reserved</a></p> 
+</footer>
+  </body>
+  </html>

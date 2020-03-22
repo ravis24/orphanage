@@ -1,0 +1,1 @@
+default_app_config = 'blood1.apps.Blood1Config'
